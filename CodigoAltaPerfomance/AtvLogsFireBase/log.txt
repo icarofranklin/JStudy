@@ -1,0 +1,3 @@
+[2026-03-25T00:09:56.140Z] [INFO] Aplicação iniciada
+[2026-03-25T00:09:56.141Z] [WARN] Usuário fez login
+[2026-03-25T00:09:56.141Z] [ERROR] Usuário fez logout

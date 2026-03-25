@@ -4,10 +4,9 @@ const path = require('path');
 const { registrarLog } = require('./logger');
 
 // Registra algumas mensagens
-registrarLog("Aplicação iniciada");
-registrarLog("Usuário fez login");
-registrarLog("Usuário fez logout");
-
+registrarLog("Aplicação iniciada", "INFO");
+registrarLog("Usuário fez login", "WARN");
+registrarLog("Usuário fez logout", "ERROR");
 // ===== Leitura do arquivo usando stream =====
 
 const caminhoLog = path.join(__dirname, 'log.txt');

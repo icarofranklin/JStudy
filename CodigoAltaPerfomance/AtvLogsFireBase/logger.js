@@ -9,10 +9,9 @@ const caminhoLog = path.join(__dirname, 'log.txt');
 // Cria stream de escrita (modo append)
 const writeStream = fs.createWriteStream(caminhoLog, { flags: 'a' });
 
-function registrarLog(mensagem) {
+function registrarLog(mensagem, nivel) {
     const data = new Date().toISOString();
-    const linha = `[${data}] ${mensagem}\n`;
-
+    const linha = `[${data}] [${nivel}] ${mensagem}\n`;
     writeStream.write(linha);
 }
 
