@@ -1,3 +1,6 @@
 [2026-04-03T20:32:56.677Z] [INFO] Aplicação iniciada
 [2026-04-03T20:32:56.681Z] [WARN] Tentativa de acesso suspeita
 [2026-04-03T20:32:56.681Z] [ERROR] Falha ao conectar com o serviço de autenticação
+[2026-04-03T20:39:31.500Z] [INFO] Aplicação iniciada
+[2026-04-03T20:39:31.500Z] [WARN] Usuário fez login
+[2026-04-03T20:39:31.500Z] [ERROR] Usuário fez logout

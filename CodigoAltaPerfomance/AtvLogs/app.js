@@ -1,27 +1,32 @@
 // app.js
 const fs = require('fs');
 const path = require('path');
-const { registrarLog } = require('./logger'); 
+const { registrarLog } = require('./logger');
 
+// Registra algumas mensagens (Atualizado para a Questão 3)
 registrarLog("Aplicação iniciada", "INFO");
-registrarLog("Tentativa de acesso suspeita", "WARN");
-registrarLog("Falha ao conectar com o serviço de autenticação", "ERROR");
+registrarLog("Usuário fez login", "WARN");
+registrarLog("Usuário fez logout", "ERROR");
 
 // ===== Leitura do arquivo usando stream =====
+
 const caminhoLog = path.join(__dirname, 'log.txt');
 
 // Cria stream de leitura
 const readStream = fs.createReadStream(caminhoLog, { encoding: 'utf-8' });
 
+// Evento disparado quando um pedaço (chunk) é lido
 readStream.on('data', (chunk) => {
     console.log("Chunk recebido:");
     console.log(chunk);
 });
 
+// Evento disparado quando a leitura termina
 readStream.on('end', () => {
     console.log("Leitura finalizada.");
 });
 
+// Evento disparado se ocorrer erro
 readStream.on('error', (erro) => {
     console.error("Erro na leitura:", erro);
 });
