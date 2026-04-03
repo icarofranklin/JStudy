@@ -9,15 +9,14 @@ Você deve definir um array notas contendo as notas do aluno.
 
 const notas= [10.0, 9.3, 8.2, 7.5]; 
 
-let soma = 0; 
-for (let nota of notas) {
-    soma = soma + nota;
-}
+const soma = notas.reduce((acumulador, notaAtual) => acumulador + notaAtual, 0);
 
-const media = soma/;
+const media = soma / notas.length;
 
-if (media >= 7){
-    console.log("Aprovado! Média: " + media);
-}else {
-    console.log("Reprovado! Média: " + media);
+console.log(`Média: ${media.toFixed(1)}`);
+
+if (media >= 7) {
+    console.log("Status: Aprovado");
+} else {
+    console.log("Status: Reprovado");
 }
